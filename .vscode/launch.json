@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Main",
+            "program": "${workspaceFolder}/main.js"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Fork",
+            "port": 9339
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch App",
+            "configurations": [
+                "Main",
+                "Fork"
+            ]
+        }
+    ]
+}
